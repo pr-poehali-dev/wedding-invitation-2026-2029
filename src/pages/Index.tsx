@@ -369,11 +369,33 @@ export default function Index() {
                 для нас важны ваши предпочтения
               </p>
 
-              <p className="text-center text-[12px] leading-relaxed mb-5"
+              <p className="text-center text-[12px] leading-relaxed mb-4"
                 style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.82)" }}>
                 Пожалуйста, пройдите опрос — так нам легче будет<br />
                 понять Ваши предпочтения по еде и алкоголю
               </p>
+              <div className="text-center mb-6">
+                <a
+                  href="https://forms.yandex.ru/cloud/6a15d2bbeb614614da4c2ff8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative overflow-hidden transition-all duration-300 group inline-block"
+                  style={{
+                    background: PINK_DARK,
+                    color: CREAM,
+                    fontFamily: F_SANS,
+                    fontSize: "10px",
+                    letterSpacing: "0.28em",
+                    textTransform: "uppercase",
+                    padding: "12px 36px",
+                    border: `1px solid ${PINK_DARK}`,
+                    textDecoration: "none",
+                  }}>
+                  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: GREEN }} />
+                  <span className="relative">Пройти опрос</span>
+                </a>
+              </div>
 
               {!submitted ? (
                 <>
