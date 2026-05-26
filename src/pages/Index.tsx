@@ -239,7 +239,27 @@ export default function Index() {
             {/* ── Верхний орнамент ── */}
             <div className="-mx-3 mb-1" style={fi(240)}><OrnamentLine /></div>
 
-            {/* ── Шапка: приглашение + фото + имена ── */}
+            {/* ── Приветствие ── */}
+            <div className="text-center mb-6" style={fi(320)}>
+              <p className="mb-3" style={{ fontFamily: F_SCRIPT, fontSize: "1.7rem", fontWeight: 600, color: DARK }}>
+                Дорогой друг!
+              </p>
+              <p className="text-[13px] leading-[1.85] mb-4"
+                style={{ fontFamily: F_SERIF, color: "rgba(26,15,10,0.75)" }}>
+                Мы рады сообщить Вам, что <span style={{ fontFamily: F_SCRIPT, fontSize: "1.05rem", fontWeight: 600, color: GOLD }}>25.07.2026</span> состоится<br />
+                самое главное торжество в нашей жизни —<br />
+                <em>день нашей свадьбы!</em>
+              </p>
+              <p className="text-[13px] leading-[1.85]"
+                style={{ fontFamily: F_SERIF, color: "rgba(26,15,10,0.75)" }}>
+                Приглашаем Вас разделить с нами<br />
+                радость этого незабываемого дня.
+              </p>
+            </div>
+
+            <StarDivider />
+
+            {/* ── Шапка: фото + имена ── */}
             <div className="text-center mb-6" style={fi(400)}>
               <p className="text-[8px] tracking-[0.45em] uppercase mb-5"
                 style={{ fontFamily: F_SANS, color: GOLD }}>
