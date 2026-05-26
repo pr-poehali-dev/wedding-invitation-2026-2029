@@ -185,9 +185,6 @@ const TimelineItem = ({ time, title, subtitle, address, delay }: {
 /* ══════════════════════ MAIN ══════════════════════ */
 export default function Index() {
   const [loaded, setLoaded] = useState(false);
-  const [transfer, setTransfer] = useState("");
-  const [food, setFood] = useState("");
-  const [alcohol, setAlcohol] = useState<string[]>([]);
   const [child, setChild] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -202,7 +199,7 @@ export default function Index() {
     transition: `opacity 0.85s ease ${delay}ms, transform 0.85s ease ${delay}ms`,
   });
 
-  const canSubmit = Boolean(transfer && food && child);
+  const canSubmit = Boolean(child);
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 py-10" style={{ background: BG }}>
@@ -372,11 +369,14 @@ export default function Index() {
                 для нас важны ваши предпочтения
               </p>
 
+              <p className="text-center text-[12px] leading-relaxed mb-5"
+                style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.82)" }}>
+                Пожалуйста, пройдите опрос — так нам легче будет<br />
+                понять Ваши предпочтения по еде и алкоголю
+              </p>
+
               {!submitted ? (
                 <>
-                  <RadioGroup label="Нужен ли вам трансфер?" options={["Да, нужен", "Нет, добираюсь сам"]} value={transfer} onChange={setTransfer} />
-                  <RadioGroup label="Предпочтения по еде" options={["Нет предпочтений", "Только рыба", "Только мясо", "Вегетарианец"]} value={food} onChange={setFood} />
-                  <CheckGroup label="Алкогольные напитки (можно несколько)" options={["Коньяк", "Вино сухое", "Вино полусладкое", "Вино белое", "Вино красное", "Виски", "Водка", "Шампанское"]} values={alcohol} onChange={setAlcohol} />
                   <RadioGroup label="Будет ли ребёнок на свадьбе?" options={["Да", "Нет"]} value={child} onChange={setChild} />
 
                   <FlowerDivider />
