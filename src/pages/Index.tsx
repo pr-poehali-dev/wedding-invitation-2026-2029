@@ -185,8 +185,6 @@ const TimelineItem = ({ time, title, subtitle, address, delay }: {
 /* ══════════════════════ MAIN ══════════════════════ */
 export default function Index() {
   const [loaded, setLoaded] = useState(false);
-  const [child, setChild] = useState("");
-  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     const t = setTimeout(() => setLoaded(true), 100);
@@ -199,7 +197,6 @@ export default function Index() {
     transition: `opacity 0.85s ease ${delay}ms, transform 0.85s ease ${delay}ms`,
   });
 
-  const canSubmit = Boolean(child);
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 py-10" style={{ background: BG }}>
@@ -397,70 +394,16 @@ export default function Index() {
                 </a>
               </div>
 
-              {!submitted ? (
-                <>
-                  <RadioGroup label="Будет ли ребёнок на свадьбе?" options={["Да", "Нет"]} value={child} onChange={setChild} />
+              <FlowerDivider />
 
-                  <FlowerDivider />
-
-                  <div className="text-center mt-6">
-                    <p className="text-[8px] tracking-[0.4em] uppercase mb-3" style={{ fontFamily: F_SANS, color: GREEN_MID }}>
-                      подтверждение присутствия
-                    </p>
-                    <p className="text-[13px] leading-relaxed mb-5"
-                      style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.85)" }}>
-                      Просим подтвердить ваше присутствие<br />до 10 июля 2026 года
-                    </p>
-
-                    <button
-                      onClick={() => canSubmit && setSubmitted(true)}
-                      disabled={!canSubmit}
-                      className="relative overflow-hidden transition-all duration-300 group"
-                      style={{
-                        background: canSubmit ? GREEN : "rgba(44,74,62,0.18)",
-                        color: CREAM,
-                        fontFamily: F_SANS,
-                        fontSize: "10px",
-                        letterSpacing: "0.3em",
-                        textTransform: "uppercase",
-                        padding: "14px 40px",
-                        border: canSubmit ? `1px solid ${GREEN}` : "1px solid rgba(44,74,62,0.15)",
-                        cursor: canSubmit ? "pointer" : "not-allowed",
-                        display: "inline-block",
-                      }}>
-                      {canSubmit && (
-                        <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                          style={{ background: PINK_DARK }} />
-                      )}
-                      <span className="relative">Подтвердить присутствие</span>
-                    </button>
-
-                    {!canSubmit && (
-                      <p className="text-[9px] mt-2.5" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.32)" }}>
-                        Пожалуйста, ответьте на все вопросы выше
-                      </p>
-                    )}
-
-                    <p className="text-[9px] mt-5 mb-1" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.62)" }}>
-                      или по телефону
-                    </p>
-                    <p style={{ fontFamily: F_SCRIPT, fontSize: "1.5rem", fontWeight: 600, color: GREEN }}>
-                      +7 (950) 226-84-43
-                    </p>
-                  </div>
-                </>
-              ) : (
-                <div className="text-center py-8">
-                  <p style={{ fontFamily: F_SCRIPT, fontSize: "2.4rem", fontWeight: 600, color: PINK_DARK }} className="mb-3">
-                    Спасибо!
-                  </p>
-                  <p className="text-[13px] leading-relaxed"
-                    style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.65)" }}>
-                    Мы получили ваши предпочтения.<br />
-                    Ждём вас с нетерпением!
-                  </p>
-                </div>
-              )}
+              <div className="text-center mt-4">
+                <p className="text-[9px] mt-5 mb-1" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.62)" }}>
+                  или по телефону
+                </p>
+                <p style={{ fontFamily: F_SCRIPT, fontSize: "1.5rem", fontWeight: 600, color: GREEN }}>
+                  +7 (950) 226-84-43
+                </p>
+              </div>
             </div>
 
             {/* ── Цветы снизу ── */}
