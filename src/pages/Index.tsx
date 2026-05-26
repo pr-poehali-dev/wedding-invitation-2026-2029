@@ -3,18 +3,18 @@ import { useEffect, useState } from "react";
 const PHOTO_URL =
   "https://cdn.poehali.dev/projects/bd4b2521-98ec-4536-a1d6-59156f77a632/bucket/a4a07c76-e7c8-4e6e-87f6-c949bb962d17.jpg";
 const FLOWERS_URL =
-  "https://cdn.poehali.dev/projects/bd4b2521-98ec-4536-a1d6-59156f77a632/files/8a79d615-c250-4250-b512-5201c982baff.jpg";
+  "https://cdn.poehali.dev/projects/bd4b2521-98ec-4536-a1d6-59156f77a632/files/e01f9ff5-9624-45ce-945a-9b8a6272951f.jpg";
 
 /* ── Цветовая схема ── */
 const GREEN      = "#2C4A3E";   // тёмно-зелёный
 const GREEN_MID  = "#3D6356";   // средний зелёный (акценты)
 const GREEN_SOFT = "#4E7A68";   // мягкий зелёный (timeline)
-const PINK       = "#F2D6D8";   // нежно-розовый (фон карточки)
+const PINK       = "#FDF6F7";   // почти белый с розовым оттенком (фон карточки)
 const PINK_MID   = "#E8B4BA";   // розовый (акцент / разделители)
 const PINK_DARK  = "#C4858E";   // насыщенный розовый (кнопки)
 const DARK       = "#1C2E27";   // почти чёрный с зелёным оттенком
 const CREAM      = "#FBF8F5";
-const BG         = "#E8F0EC";   // бледно-зелёный фон страницы
+const BG         = "#F4F8F5";   // очень светлый фон страницы
 
 const F_SCRIPT = "'Caveat', cursive";
 const F_SERIF  = "'Cormorant Garamond', serif";
@@ -175,8 +175,8 @@ const TimelineItem = ({ time, title, subtitle, address, delay }: {
       <div className="pb-4">
         <p className="text-[9px] font-medium tracking-[0.22em] uppercase mb-0.5" style={{ fontFamily: F_SANS, color: GREEN_SOFT }}>{time}</p>
         <p className="font-semibold leading-tight" style={{ fontFamily: F_SERIF, fontSize: "1.05rem", color: DARK }}>{title}</p>
-        {subtitle && <p className="text-[11px] mt-0.5" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.62)" }}>{subtitle}</p>}
-        {address && <p className="text-[10px] mt-0.5 leading-relaxed italic" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.5)" }}>{address}</p>}
+        {subtitle && <p className="text-[11px] mt-0.5" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.82)" }}>{subtitle}</p>}
+        {address && <p className="text-[10px] mt-0.5 leading-relaxed italic" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.7)" }}>{address}</p>}
       </div>
     </div>
   );
@@ -251,7 +251,7 @@ export default function Index() {
                 Дорогой друг!
               </p>
               <p className="text-[13px] leading-[1.9] mb-4"
-                style={{ fontFamily: F_SERIF, color: "rgba(28,46,39,0.78)" }}>
+                style={{ fontFamily: F_SERIF, color: "rgba(28,46,39,0.92)" }}>
                 Мы рады сообщить Вам, что{" "}
                 <span style={{ fontFamily: F_SCRIPT, fontSize: "1.05rem", fontWeight: 600, color: PINK_DARK }}>25.07.2026</span>{" "}
                 состоится<br />
@@ -259,7 +259,7 @@ export default function Index() {
                 <em>день нашей свадьбы!</em>
               </p>
               <p className="text-[13px] leading-[1.9]"
-                style={{ fontFamily: F_SERIF, color: "rgba(28,46,39,0.78)" }}>
+                style={{ fontFamily: F_SERIF, color: "rgba(28,46,39,0.92)" }}>
                 Приглашаем Вас разделить с нами<br />
                 радость этого незабываемого дня.
               </p>
@@ -297,7 +297,7 @@ export default function Index() {
                 Антон
               </p>
               <p className="text-[8px] tracking-[0.32em] uppercase mt-4"
-                style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.45)" }}>
+                style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.65)" }}>
                 просят вас о незабываемом присутствии
               </p>
             </div>
@@ -316,7 +316,7 @@ export default function Index() {
                   <p style={{ fontFamily: F_SCRIPT, fontSize: "1.8rem", fontWeight: 700, color: GREEN, lineHeight: 1.1 }}>2026</p>
                 </div>
               </div>
-              <p className="text-[8px] tracking-[0.28em] uppercase mt-2" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.42)" }}>
+              <p className="text-[8px] tracking-[0.28em] uppercase mt-2" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.62)" }}>
                 Санкт‑Петербург
               </p>
             </div>
@@ -342,7 +342,7 @@ export default function Index() {
                 цветовая гамма торжества
               </p>
               <p className="text-center text-[12px] leading-relaxed mb-5"
-                style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.68)" }}>
+                style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.85)" }}>
                 Мы не вводим дресс-код, но будем благодарны,<br />
                 если вы будете придерживаться следующей гаммы:
               </p>
@@ -386,7 +386,7 @@ export default function Index() {
                       подтверждение присутствия
                     </p>
                     <p className="text-[13px] leading-relaxed mb-5"
-                      style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.68)" }}>
+                      style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.85)" }}>
                       Просим подтвердить ваше присутствие<br />до 10 июля 2026 года
                     </p>
 
@@ -419,7 +419,7 @@ export default function Index() {
                       </p>
                     )}
 
-                    <p className="text-[9px] mt-5 mb-1" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.38)" }}>
+                    <p className="text-[9px] mt-5 mb-1" style={{ fontFamily: F_SANS, color: "rgba(28,46,39,0.62)" }}>
                       или по телефону
                     </p>
                     <p style={{ fontFamily: F_SCRIPT, fontSize: "1.5rem", fontWeight: 600, color: GREEN }}>
@@ -459,12 +459,12 @@ export default function Index() {
             {/* ── Подпись ── */}
             <div className="text-center mt-2 relative z-10" style={fi(1350)}>
               <p className="text-[12px] leading-relaxed"
-                style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.52)" }}>
+                style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(28,46,39,0.75)" }}>
                 Мы безмерно благодарны за то, что вы разделите<br />
                 этот особенный день вместе с нами
               </p>
               <p className="text-[8px] tracking-[0.3em] uppercase mt-3"
-                style={{ fontFamily: F_SANS, color: "rgba(44,74,62,0.45)" }}>
+                style={{ fontFamily: F_SANS, color: "rgba(44,74,62,0.68)" }}>
                 с любовью, Виктория &amp; Антон
               </p>
             </div>
