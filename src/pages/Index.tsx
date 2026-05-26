@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 const PHOTO_URL =
   "https://cdn.poehali.dev/projects/bd4b2521-98ec-4536-a1d6-59156f77a632/bucket/a4a07c76-e7c8-4e6e-87f6-c949bb962d17.jpg";
 
-const GOLD = "#B8972A";
-const DARK = "#2A1F1A";
-const CREAM = "#FAF7F2";
-const BG = "#EDE8DF";
+const GOLD = "#C9952A";
+const DARK = "#1A0F0A";
+const CREAM = "#FBF8F3";
+const BG = "#E6DDD0";
 
 /* ─── Шрифты ─── */
 const F_SCRIPT = "'Caveat', cursive";
@@ -179,8 +179,8 @@ const TimelineItem = ({ time, title, subtitle, address, delay }: {
       <div className="pb-4">
         <p className="text-[9px] font-medium tracking-[0.22em] uppercase mb-0.5" style={{ fontFamily: F_SANS, color: GOLD }}>{time}</p>
         <p className="font-semibold leading-tight" style={{ fontFamily: F_SERIF, fontSize: "1.05rem", color: DARK }}>{title}</p>
-        {subtitle && <p className="text-[11px] mt-0.5" style={{ fontFamily: F_SANS, color: "rgba(42,31,26,0.5)" }}>{subtitle}</p>}
-        {address && <p className="text-[10px] mt-0.5 leading-relaxed italic" style={{ fontFamily: F_SANS, color: "rgba(42,31,26,0.4)" }}>{address}</p>}
+        {subtitle && <p className="text-[11px] mt-0.5" style={{ fontFamily: F_SANS, color: "rgba(26,15,10,0.68)" }}>{subtitle}</p>}
+        {address && <p className="text-[10px] mt-0.5 leading-relaxed italic" style={{ fontFamily: F_SANS, color: "rgba(26,15,10,0.55)" }}>{address}</p>}
       </div>
     </div>
   );
@@ -259,17 +259,17 @@ export default function Index() {
               </div>
 
               {/* Имена — рукописный Caveat */}
-              <p style={{ fontFamily: F_SCRIPT, fontSize: "3.5rem", fontWeight: 600, color: DARK, lineHeight: 1 }}>
+              <p style={{ fontFamily: F_SCRIPT, fontSize: "3.5rem", fontWeight: 700, color: DARK, lineHeight: 1 }}>
                 Виктория
               </p>
-              <p className="tracking-[0.3em] my-2" style={{ fontFamily: F_SERIF, fontSize: "1rem", color: "rgba(184,151,42,0.65)" }}>
+              <p className="tracking-[0.3em] my-2" style={{ fontFamily: F_SERIF, fontSize: "1rem", color: GOLD }}>
                 ✦ &amp; ✦
               </p>
-              <p style={{ fontFamily: F_SCRIPT, fontSize: "3.5rem", fontWeight: 600, color: DARK, lineHeight: 1 }}>
+              <p style={{ fontFamily: F_SCRIPT, fontSize: "3.5rem", fontWeight: 700, color: DARK, lineHeight: 1 }}>
                 Антон
               </p>
               <p className="text-[8px] tracking-[0.32em] uppercase mt-4"
-                style={{ fontFamily: F_SANS, color: "rgba(42,31,26,0.34)" }}>
+                style={{ fontFamily: F_SANS, color: "rgba(26,15,10,0.5)" }}>
                 просят вас о незабываемом присутствии
               </p>
             </div>
@@ -284,8 +284,8 @@ export default function Index() {
               <div className="flex items-baseline justify-center gap-3">
                 <span style={{ fontFamily: F_SCRIPT, fontSize: "5.8rem", fontWeight: 700, color: DARK, lineHeight: 1 }}>25</span>
                 <div className="text-left">
-                  <p className="text-[10px] tracking-[0.2em] uppercase" style={{ fontFamily: F_SANS, color: "rgba(42,31,26,0.48)" }}>июля</p>
-                  <p style={{ fontFamily: F_SCRIPT, fontSize: "1.8rem", fontWeight: 600, color: DARK, lineHeight: 1.1 }}>2026</p>
+                  <p className="text-[10px] tracking-[0.2em] uppercase" style={{ fontFamily: F_SANS, color: "rgba(26,15,10,0.6)" }}>июля</p>
+                  <p style={{ fontFamily: F_SCRIPT, fontSize: "1.8rem", fontWeight: 700, color: DARK, lineHeight: 1.1 }}>2026</p>
                 </div>
               </div>
               <p className="text-[8px] tracking-[0.28em] uppercase mt-2" style={{ fontFamily: F_SANS, color: "rgba(42,31,26,0.34)" }}>
@@ -314,7 +314,7 @@ export default function Index() {
                 цветовая гамма торжества
               </p>
               <p className="text-center text-[11px] leading-relaxed mb-5"
-                style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(42,31,26,0.58)" }}>
+                style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(26,15,10,0.7)" }}>
                 Мы не вводим дресс-код, но будем благодарны,<br />
                 если вы будете придерживаться следующей гаммы:
               </p>
@@ -382,7 +382,7 @@ export default function Index() {
                       подтверждение присутствия
                     </p>
                     <p className="text-[13px] leading-relaxed mb-5"
-                      style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(42,31,26,0.58)" }}>
+                      style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(26,15,10,0.72)" }}>
                       Просим подтвердить ваше присутствие<br />до 10 июля 2026 года
                     </p>
 
@@ -422,7 +422,7 @@ export default function Index() {
                       или по телефону
                     </p>
                     <p style={{ fontFamily: F_SCRIPT, fontSize: "1.5rem", fontWeight: 600, color: GOLD }}>
-                      +7 (900) 000-00-00
+                      +7 (950) 226-84-43
                     </p>
                   </div>
                 </>
@@ -446,7 +446,7 @@ export default function Index() {
             {/* ── Благодарность ── */}
             <div className="text-center mt-2" style={fi(1360)}>
               <p className="text-[12px] leading-relaxed"
-                style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(42,31,26,0.4)" }}>
+                style={{ fontFamily: F_SERIF, fontStyle: "italic", color: "rgba(26,15,10,0.55)" }}>
                 Мы безмерно благодарны за то, что вы разделите<br />
                 этот особенный день вместе с нами
               </p>
